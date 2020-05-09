@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:baixing_life/core/model/home_model.dart';
 import 'package:baixing_life/core/services/home_request.dart';
-import 'package:baixing_life/ui/pages/home/home_swiper.dart';
-import 'package:baixing_life/ui/pages/home/home_top_navigator.dart';
-import 'package:baixing_life/ui/pages/home/home_middle_shop.dart';
-import 'package:baixing_life/ui/pages/home/home_recommend.dart';
-import 'package:baixing_life/ui/pages/home/home_floor.dart';
-import 'package:baixing_life/ui/pages/home/home_middle_ad.dart';
+import './home_swiper.dart';
+import './home_top_navigator.dart';
+import './home_middle_shop.dart';
+import './home_recommend.dart';
+import './home_floor.dart';
+import './home_middle_ad.dart';
 
 class XYHomeContent extends StatelessWidget {
   @override
