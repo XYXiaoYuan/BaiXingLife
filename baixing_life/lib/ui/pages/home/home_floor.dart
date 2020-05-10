@@ -70,7 +70,7 @@ class _FloorContent extends StatelessWidget {
     );
   }
 
-  Widget _firstRow(context){
+  Widget _firstRow(BuildContext context) {
     return Row(
       children: <Widget>[
         _goodsItem(context, _floorGoodsList[0]),
@@ -84,7 +84,7 @@ class _FloorContent extends StatelessWidget {
     );
   }
 
-  Widget _otherGoods(context) {
+  Widget _otherGoods(BuildContext context) {
     return Row(
       children: <Widget>[
        _goodsItem(context, _floorGoodsList[3]),
@@ -93,11 +93,11 @@ class _FloorContent extends StatelessWidget {
     );
   }
 
-  Widget _goodsItem(context, Floor goods) {
+  Widget _goodsItem(BuildContext context, Floor goods) {
     return Container(
       width: 187.5.px,
       child: InkWell(
-        onTap:(){
+        onTap:() {
           // Application.router.navigateTo(context, "/detail?id=${goods['goodsId']}");
         },
         child: Image.network(goods.image),

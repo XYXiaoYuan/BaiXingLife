@@ -48,16 +48,16 @@ class XYHomeRecommend extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: _recommendList.length,
-        itemBuilder: (context, index){
-          return _item(index, context);
+        itemBuilder: (context, index) {
+          return _item(context, index);
         },
       ),
     );
   }
 
-  Widget _item(index,context) {
+  Widget _item(BuildContext context, int index) {
     return InkWell(
-      onTap: (){
+      onTap: () {
         //  Application.router.navigateTo(context,"/detail?id=${_recommendList[index]['goodsId']}");
       },
       child: Container(

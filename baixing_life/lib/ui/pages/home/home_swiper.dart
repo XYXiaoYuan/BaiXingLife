@@ -11,7 +11,7 @@ class XYHomeSwiper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color:Colors.white,
+      color: Colors.white,
       height: 166.px,
       child: Swiper(
         itemCount: _swiperDataList.length,
@@ -26,11 +26,11 @@ class XYHomeSwiper extends StatelessWidget {
             activeColor: Colors.black
           )
         ),
-        itemBuilder: (BuildContext context,int index){
+        itemBuilder: (BuildContext context,int index) {
           return InkWell(
             child: Image.network(
               "${_swiperDataList[index].image}",
-              fit:BoxFit.fill
+              fit: BoxFit.fill
             ),
             onTap: () {
               print("点击了广告");

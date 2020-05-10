@@ -11,6 +11,12 @@
       "deviceId": "63bf3a9d844ac072edfa935ce01cc570806bebaf"
     },
     {
+      "name": "rongzai",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "cd3043ceaa1fecb97b1e2da9093d2d11f0cad1e3"
+    },
+    {
       "name": "Current Device",
       "request": "launch",
       "type": "dart",

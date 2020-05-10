@@ -25,15 +25,15 @@ class XYHomeTopNavigator extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         crossAxisCount: maxCount,
         padding: EdgeInsets.all(4.0.px),
-        children: _navigatorList.map((item){
+        children: _navigatorList.map((item) {
           tempIndex += 1;
-          return _gridViewItem(context, item, tempIndex);
+          return _gridViewItem(context, tempIndex, item);
         }).toList(),
       ),
     );
   }
 
-  Widget _gridViewItem(BuildContext context, Category item, int index){
+  Widget _gridViewItem(BuildContext context, int index, Category item) {
     return InkWell(
       child: Column(
         children: <Widget>[
