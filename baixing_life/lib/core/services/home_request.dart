@@ -1,5 +1,5 @@
 import 'http_request.dart';
-import 'package:baixing_life/core/model/home_model.dart';
+import '../model/home_model.dart';
 
 class XYHomeRequest {
   static Future<HomeModel> getHomeData() async {

@@ -1,10 +1,10 @@
-import 'package:baixing_life/core/router/router.dart';
 import 'package:flutter/material.dart';
-
-import 'package:baixing_life/ui/shared/app_theme.dart';
-import 'package:baixing_life/core/sizefit/size_fit.dart';
 import 'package:provider/provider.dart';
-import 'package:baixing_life/core/viewmodel/initialize_providers.dart';
+
+import './ui/shared/app_theme.dart';
+import './core/router/router.dart';
+import './core/sizefit/size_fit.dart';
+import './core/viewmodel/initialize_providers.dart';
 
 void main() => runApp(MultiProvider(providers: providers, child: MyApp()));
 
