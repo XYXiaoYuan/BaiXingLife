@@ -10,7 +10,7 @@ class XYHomeRecommend extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 10.0.px),
+      margin: EdgeInsets.only(top: 20.0.rpx),
       child: Column(
         children: <Widget>[
           _titleWidget(),
@@ -23,7 +23,7 @@ class XYHomeRecommend extends StatelessWidget {
   //推荐商品标题
   Widget _titleWidget() {
      return Container(
-       height: 32.px,
+       height: 64.rpx,
        alignment: Alignment.centerLeft,
        padding: EdgeInsets.fromLTRB(5.0, 2.0, 0, 5.0),
        decoration: BoxDecoration(
@@ -44,7 +44,7 @@ class XYHomeRecommend extends StatelessWidget {
 
   Widget _recommedList(BuildContext context) {
     return  Container(
-      height: 165.px,
+      height: 330.rpx,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: _recommendList.length,
@@ -61,7 +61,7 @@ class XYHomeRecommend extends StatelessWidget {
         //  Application.router.navigateTo(context,"/detail?id=${_recommendList[index]['goodsId']}");
       },
       child: Container(
-        width: 120.px,
+        width: 240.rpx,
         // padding: EdgeInsets.all(8.0),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -77,12 +77,12 @@ class XYHomeRecommend extends StatelessWidget {
             Image.network(_recommendList[index].image),
             Text(
               '￥${_recommendList[index].mallPrice}', 
-              style: TextStyle(fontSize: 12),
+              style: TextStyle(fontSize: 24.ssp),
             ),
             Text(
               '￥${_recommendList[index].price}',
               style: TextStyle(
-                fontSize: 12,
+                fontSize: 24.ssp,
                 decoration: TextDecoration.lineThrough,
                 color: Colors.grey,
               ),

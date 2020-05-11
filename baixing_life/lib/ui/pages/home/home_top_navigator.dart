@@ -18,13 +18,13 @@ class XYHomeTopNavigator extends StatelessWidget {
 
     return Container(
       color: Colors.white,
-      height: 85.px,
-      margin: EdgeInsets.only(top: 5.0.px),
-      padding: EdgeInsets.all(3.0.px),
+      height: 170.rpx,
+      margin: EdgeInsets.only(top: 10.0.rpx),
+      padding: EdgeInsets.all(6.0.rpx),
       child: GridView.count(
         physics: NeverScrollableScrollPhysics(),
         crossAxisCount: maxCount,
-        padding: EdgeInsets.all(4.0.px),
+        padding: EdgeInsets.all(8.0.rpx),
         children: _navigatorList.map((item) {
           tempIndex += 1;
           return _gridViewItem(context, tempIndex, item);
@@ -39,12 +39,12 @@ class XYHomeTopNavigator extends StatelessWidget {
         children: <Widget>[
           Image.network(
             item.image,
-            width: 48.px
+            width: 96.rpx
           ),
-          SizedBox(height: 5.px),
+          SizedBox(height: 10.0.rpx),
           Text(
             item.mallCategoryName, 
-            style: TextStyle(fontSize: 12)
+            style: TextStyle(fontSize: 24.ssp)
           )
         ],
       ),

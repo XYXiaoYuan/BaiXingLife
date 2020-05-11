@@ -17,7 +17,7 @@ class XYHomeMiddleShop extends StatelessWidget {
         children: <Widget>[
           GestureDetector(
             child: Container(
-              margin: EdgeInsets.only(top:5.0.px),
+              margin: EdgeInsets.only(top: 10.0.rpx),
               color: Colors.white,
               child: Image.network(_homeData.advertesPicture.pictureAddress),
             ),

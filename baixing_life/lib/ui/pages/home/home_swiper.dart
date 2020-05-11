@@ -12,16 +12,16 @@ class XYHomeSwiper extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      height: 166.px,
+      height: 333.rpx,
       child: Swiper(
         itemCount: _swiperDataList.length,
         autoplay: true,
         pagination: SwiperPagination(
-          margin: EdgeInsets.only(bottom: 5.px),
+          margin: EdgeInsets.only(bottom: 10.0.rpx),
           builder: DotSwiperPaginationBuilder(
-            size: 8,
-            activeSize: 8,
-            space: 4,
+            size: 16.rpx,
+            activeSize: 16.rpx,
+            space: 8.rpx,
             color: Colors.grey[300],
             activeColor: Colors.black
           )

@@ -10,8 +10,8 @@ class XYHomeMiddleAd extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 170.px,
-      padding: EdgeInsets.only(top: 5.0.px),
+      height: 340.rpx,
+      padding: EdgeInsets.only(top: 10.0.rpx),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         physics: NeverScrollableScrollPhysics(),

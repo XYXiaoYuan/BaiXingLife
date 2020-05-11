@@ -47,7 +47,7 @@ class _FloorTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8.0.px),
+      padding: EdgeInsets.all(16.0.rpx),
       child: Image.network(_picture.pictureAddress),
     );
   }
@@ -95,7 +95,7 @@ class _FloorContent extends StatelessWidget {
 
   Widget _goodsItem(BuildContext context, Floor goods) {
     return Container(
-      width: 187.5.px,
+      width: 375.rpx,
       child: InkWell(
         onTap:() {
           // Application.router.navigateTo(context, "/detail?id=${goods['goodsId']}");

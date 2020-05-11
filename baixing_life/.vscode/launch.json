@@ -5,6 +5,12 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Current Device",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "ACD63E8F-93A6-475B-B2E3-5FF6784661B3"
+    },
+    {
       "name": "Happy",
       "request": "launch",
       "type": "dart",
@@ -15,12 +21,6 @@
       "request": "launch",
       "type": "dart",
       "deviceId": "cd3043ceaa1fecb97b1e2da9093d2d11f0cad1e3"
-    },
-    {
-      "name": "Current Device",
-      "request": "launch",
-      "type": "dart",
-      "deviceId": "a7a1d9aecd5b1237bbe8a4df9ca301e33a7d7414"
     },
   ]
 }
