@@ -25,16 +25,16 @@ class XYHomeContent extends StatelessWidget {
         final homeData = snapshot.data;
         return ListView(
           children: <Widget>[
-            XYHomeSwiper(homeData.slides),
-            XYHomeTopNavigator(homeData.category),
-            XYHomeMiddleShop(homeData),
-            XYHomeMiddleAd([
+            XYHomeSwiper(swiperDataList: homeData.slides),
+            XYHomeTopNavigator(navigatorList: homeData.category),
+            XYHomeMiddleShop(homeData: homeData),
+            XYHomeMiddleAd(ads: [
               homeData.saoma,
               homeData.integralMallPic,
               homeData.newUser
             ]),
-            XYHomeRecommend(homeData.recommend),
-            XYHomeFloor(homeData),
+            XYHomeRecommend(recommendList: homeData.recommend),
+            XYHomeFloor(homeData: homeData),
             
           ]
         );

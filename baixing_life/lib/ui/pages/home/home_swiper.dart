@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:baixing_life/core/sizefit/flutter_sizefit.dart';
 import 'package:baixing_life/core/model/home_model.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
 class XYHomeSwiper extends StatelessWidget {
-  XYHomeSwiper(this._swiperDataList);
+  XYHomeSwiper({
+    Key key,
+    this.swiperDataList
+  });
   
-  final List<Slide> _swiperDataList;
+  final List<Slide> swiperDataList;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +18,7 @@ class XYHomeSwiper extends StatelessWidget {
       color: Colors.white,
       height: 333.rpx,
       child: Swiper(
-        itemCount: _swiperDataList.length,
+        itemCount: swiperDataList.length,
         autoplay: true,
         pagination: SwiperPagination(
           margin: EdgeInsets.only(bottom: 10.0.rpx),
@@ -28,8 +32,8 @@ class XYHomeSwiper extends StatelessWidget {
         ),
         itemBuilder: (BuildContext context,int index) {
           return InkWell(
-            child: Image.network(
-              "${_swiperDataList[index].image}",
+            child: Image(
+              image: CachedNetworkImageProvider(swiperDataList[index].image),
               fit: BoxFit.fill
             ),
             onTap: () {

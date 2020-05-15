@@ -27,7 +27,7 @@ class HttpRequest {
         queryParameters: params, 
         options: options
       );
-      
+      print(response.data);
       final jsons = json.decode(response.data.toString());
       if (jsons['code'] == '0') {
         return jsons['data'];

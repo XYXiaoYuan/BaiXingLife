@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:baixing_life/core/sizefit/flutter_sizefit.dart';
 import 'package:baixing_life/core/model/home_model.dart';
 
 class XYHomeFloor extends StatelessWidget {
-  XYHomeFloor(this._homeData);
+  XYHomeFloor({Key key, this.homeData}) : super(key: key);
 
-  final HomeModel _homeData;
+  final HomeModel homeData;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        _SingleFloor(_homeData.floor1Pic, _homeData.floor1),
-        _SingleFloor(_homeData.floor2Pic, _homeData.floor2),
-        _SingleFloor(_homeData.floor3Pic, _homeData.floor3),
+        _SingleFloor(homeData.floor1Pic, homeData.floor1),
+        _SingleFloor(homeData.floor2Pic, homeData.floor2),
+        _SingleFloor(homeData.floor3Pic, homeData.floor3),
       ],
     );
   }
@@ -48,7 +49,10 @@ class _FloorTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(16.0.rpx),
-      child: Image.network(_picture.pictureAddress),
+      child: CachedNetworkImage(
+        placeholder: (context, url) => CircularProgressIndicator(), 
+        imageUrl: _picture.pictureAddress
+      ),
     );
   }
 }
@@ -100,7 +104,9 @@ class _FloorContent extends StatelessWidget {
         onTap:() {
           // Application.router.navigateTo(context, "/detail?id=${goods['goodsId']}");
         },
-        child: Image.network(goods.image),
+        child: Image(
+          image: CachedNetworkImageProvider(goods.image),
+        ),
       ),
     );
   }

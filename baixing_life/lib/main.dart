@@ -8,8 +8,13 @@ import './core/viewmodel/initialize_providers.dart';
 
 void main() => runApp(MultiProvider(providers: providers, child: MyApp()));
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   // This widget is the root of your application.
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     // 对SizeFit进行初始化

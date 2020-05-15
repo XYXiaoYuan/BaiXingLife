@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:baixing_life/core/sizefit/flutter_sizefit.dart';
 import 'package:baixing_life/core/model/home_model.dart';
 
 class XYHomeRecommend extends StatelessWidget {
-  XYHomeRecommend(this._recommendList);
+  XYHomeRecommend({Key key, this.recommendList}) : super(key: key);
 
-  final List<Recommend> _recommendList;
+  final List<Recommend> recommendList;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +48,7 @@ class XYHomeRecommend extends StatelessWidget {
       height: 330.rpx,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: _recommendList.length,
+        itemCount: recommendList.length,
         itemBuilder: (context, index) {
           return _item(context, index);
         },
@@ -58,7 +59,7 @@ class XYHomeRecommend extends StatelessWidget {
   Widget _item(BuildContext context, int index) {
     return InkWell(
       onTap: () {
-        //  Application.router.navigateTo(context,"/detail?id=${_recommendList[index]['goodsId']}");
+        //  Application.router.navigateTo(context,"/detail?id=${recommendList[index]['goodsId']}");
       },
       child: Container(
         width: 240.rpx,
@@ -74,13 +75,15 @@ class XYHomeRecommend extends StatelessWidget {
         ),
         child: Column(
           children: <Widget>[
-            Image.network(_recommendList[index].image),
+            Image(
+              image: CachedNetworkImageProvider(recommendList[index].image),
+            ),
             Text(
-              '￥${_recommendList[index].mallPrice}', 
+              '￥${recommendList[index].mallPrice}', 
               style: TextStyle(fontSize: 24.ssp),
             ),
             Text(
-              '￥${_recommendList[index].price}',
+              '￥${recommendList[index].price}',
               style: TextStyle(
                 fontSize: 24.ssp,
                 decoration: TextDecoration.lineThrough,

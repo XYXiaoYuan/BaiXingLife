@@ -11,7 +11,7 @@ class XYHomeRequest {
       method: 'post', 
       params: params
     );
-    
+        
     // 2.json转modal
     final homeModel = HomeModel.fromJson(json);
     return homeModel;
